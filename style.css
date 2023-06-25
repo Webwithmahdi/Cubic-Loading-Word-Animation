@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+.content {
+  margin: auto;
+}
+.loading-area {
+  width: 350px;
+  height: 50px;
+  display: flex;
+}
+.loading-word {
+  flex: 1 1 50px;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.4s ease-in-out;
+  animation: word 4s linear alternate infinite;
+}
+.loading-word:nth-child(2) {
+  animation-delay: .7s;
+}
+.loading-word:nth-child(3) {
+  animation-delay: 1.4s;
+}
+.loading-word:nth-child(4){
+  animation-delay: 2.1s;
+}
+.loading-word:nth-child(5){
+  animation-delay: 2.8s;
+}
+.loading-word:nth-child(6){
+  animation-delay: 3.5s;
+}
+.loading-word:last-child{
+  animation-delay: 4.2s;
+}
+.side {
+  position: absolute;
+  inset: 0;
+}
+.side:first-child {
+  transform: rotateY(-180deg) translateZ(25px);
+}
+.side:nth-child(2) {
+  background-color: #7979f2;
+  transform: rotateX(90deg) translateZ(25px);
+  display: grid;
+  place-content: center;
+}
+.side:nth-child(2) span {
+  font-size: 20px;
+  color: white;
+}
+
+.word-style{
+  transform: rotateX(-90deg);
+}
